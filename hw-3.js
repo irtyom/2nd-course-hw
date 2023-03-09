@@ -72,7 +72,7 @@ if (oddNumber === null || oddNumber === '') {
 }
 
 //Задание 8
-let clientOS = Number(prompt('Пожалуйста, укажите, пользователем какой ОС Вы являетесь: 0 - iOS, 1 - Android'));
+const clientOS = Number(prompt('Пожалуйста, укажите, пользователем какой ОС Вы являетесь: 0 - iOS, 1 - Android'));
 if (clientOS !== 0 && clientOS !== 1) {
     alert('Пожалуйста, введите 0 или 1');
 }
@@ -89,5 +89,11 @@ if (clientOS === 0 && clientDeviceYear < 2015) {
     alert('Установите облегчённую версию приложения для iOS по ссылке');
 }
 else if (clientOS === 0 && clientDeviceYear > 2015) {
+    alert('Установите полную версию приложения для iOS по ссылке');
+}
+else if (clientOS === 1 && clientDeviceYear < 2015) {
+    alert('Установите облегчённую версию приложения для Android по ссылке')
+}
+else if (clientOS === 1 && clientDeviceYear > 2015) {
     alert('Установите полную версию приложения для Android по ссылке')
 }
