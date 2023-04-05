@@ -19,11 +19,18 @@ thirdArr = thirdArr.join(' ');
 console.log(thirdArr);
 
 //Задание 4
-let fourthArr = [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1],
-]
+let fourthArr = [];
+let innerArr = [];
+
+for (let i = 0; i < 3; i++) {
+  innerArr.push(1);
+}
+
+for (let i = 0; i < 3; i++) {
+  fourthArr.push(innerArr);
+}
+
+console.log(fourthArr);
 
 //Задание 5
 let fifthArr = [1, 1, 1];
