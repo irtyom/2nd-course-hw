@@ -18,5 +18,3 @@ function timeOfTheYear() {
         alert('Это осенний месяц')
     }
 }
-
-console.log(timeOfTheYear());
