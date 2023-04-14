@@ -18,3 +18,31 @@ function timeOfTheYear() {
         alert('Это осенний месяц')
     }
 }
+
+//Запомни слова
+function wordsToRemember() {
+
+const words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+for (let i = words.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [words[i], words[j]] = [words[j], words[i]];
+  } 
+
+for (let i = 1; i < words.length; i++) {
+    words[i] = words[i].toLowerCase();
+  }
+
+alert(words.join(', '));
+
+const firstWord = prompt('Чему равнялся первый элемент массива?').toLowerCase();
+const lastWord = prompt('Чему равнялся последний элемент массива?').toLowerCase();
+
+if (firstWord === words[0] && lastWord === words[words.length - 1]) {
+  alert('Поздравляем, вы угадали оба элемента!');
+} else if (firstWord === words[0] || lastWord === words[words.length - 1]) {
+  alert('Вы были близки к победе!');
+} else {
+  alert('Вы ответили неверно!');
+}
+}

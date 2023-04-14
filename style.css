@@ -85,16 +85,16 @@ body {
   gap: 32px;
 }
 .game-block {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
   height: 800px;
   align-items: center;
+  justify-content: space-between;
+}
+.game-block__2 {
+  flex-direction: row-reverse;
 }
 .game-months {
-  grid-column: span 6;
-}
-.game-picture {
-  grid-column: span 5;
+  width: 50%;
 }
 .game-list {
   padding-top: 128px;
@@ -193,5 +193,8 @@ body {
   .game-picture {
     display: flex;
     justify-content: center;
+  }
+  .game-months {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
